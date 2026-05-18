@@ -1,0 +1,24 @@
+# Personal config — never commit
+.env
+.env.local
+
+# Rendered LaunchAgent plists contain bot tokens
+**/com.*.murmur-*.plist
+!launchagents/com.USER.*.plist.template
+
+# Bridge state
+**/seen-msg-ids.txt
+**/.config/murmur-bridge/
+
+# Murmur client state
+**/.murmur/
+**/*.session
+**/*.session.bak
+
+# macOS junk
+.DS_Store
+*.swp
+
+# Logs
+*.log
+**/Library/Logs/murmur-*

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Template — placeholders __USER__ and __HOME__ are replaced by setup.sh.
+  Final filename: ~/Library/LaunchAgents/com.<your-user>.murmur-sync.plist
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.__USER__.murmur-sync</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/opt/homebrew/bin/murmur</string>
+        <string>sync</string>
+        <string>--realtime</string>
+        <string>--timeout</string>
+        <string>86400000</string>
+        <string>--webhook</string>
+        <string>http://127.0.0.1:__BRIDGE_PORT__/murmur</string>
+        <string>--webhook-body</string>
+        <string>{"event":"murmur.incoming","mode":"now"}</string>
+    </array>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <true/>
+
+    <key>ThrottleInterval</key>
+    <integer>15</integer>
+
+    <key>StandardOutPath</key>
+    <string>__HOME__/Library/Logs/murmur-sync.out.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>__HOME__/Library/Logs/murmur-sync.err.log</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+        <key>HOME</key>
+        <string>__HOME__</string>
+    </dict>
+</dict>
+</plist>

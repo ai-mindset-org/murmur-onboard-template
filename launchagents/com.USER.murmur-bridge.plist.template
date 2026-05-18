@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.__USER__.murmur-bridge</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/python3</string>
+        <string>__HOME__/bin/murmur-bridge.py</string>
+    </array>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <true/>
+
+    <key>ThrottleInterval</key>
+    <integer>10</integer>
+
+    <key>StandardOutPath</key>
+    <string>__HOME__/Library/Logs/murmur-bridge.out.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>__HOME__/Library/Logs/murmur-bridge.err.log</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+        <key>HOME</key>
+        <string>__HOME__</string>
+
+        <!--
+          The setup.sh script populates these from your .env file.
+          Treat the rendered plist as a secret — it contains your bot token.
+          Default permissions chmod 600 are applied by setup.sh.
+        -->
+        <key>MURMUR_BRIDGE_BOT_TOKEN</key>
+        <string>__MURMUR_BRIDGE_BOT_TOKEN__</string>
+
+        <key>MURMUR_BRIDGE_CHANNEL</key>
+        <string>__MURMUR_BRIDGE_CHANNEL__</string>
+
+        <key>MURMUR_PEER_IDS</key>
+        <string>__MURMUR_PEER_IDS__</string>
+
+        <key>BRIDGE_PORT</key>
+        <string>__BRIDGE_PORT__</string>
+
+        <key>CLAWDBOT_WAKE_URL</key>
+        <string>__CLAWDBOT_WAKE_URL__</string>
+
+        <key>MURMUR_BIN</key>
+        <string>/opt/homebrew/bin/murmur</string>
+
+        <key>STATE_DIR</key>
+        <string>__HOME__/.config/murmur-bridge</string>
+    </dict>
+</dict>
+</plist>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.__USER__.murmur-heartbeat</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>__HOME__/bin/murmur-heartbeat.sh</string>
+    </array>
+
+    <!-- Fires every __HEARTBEAT_INTERVAL__ seconds. Default: 1800 = 30 minutes. -->
+    <key>StartInterval</key>
+    <integer>__HEARTBEAT_INTERVAL__</integer>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>__HOME__/Library/Logs/murmur-heartbeat.out.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>__HOME__/Library/Logs/murmur-heartbeat.err.log</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+        <key>HOME</key>
+        <string>__HOME__</string>
+
+        <key>MURMUR_BRIDGE_BOT_TOKEN</key>
+        <string>__MURMUR_BRIDGE_BOT_TOKEN__</string>
+
+        <key>MURMUR_BRIDGE_CHANNEL</key>
+        <string>__MURMUR_BRIDGE_CHANNEL__</string>
+
+        <key>BRIDGE_PORT</key>
+        <string>__BRIDGE_PORT__</string>
+
+        <key>LOG_DIR</key>
+        <string>__HOME__/Library/Logs</string>
+    </dict>
+</dict>
+</plist>
