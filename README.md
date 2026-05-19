@@ -7,6 +7,20 @@
 > Born 2026-05-18 from the SHAPER × JARVIS handshake during Stage 1 closure
 > of Worldstream NL migration.
 
+---
+
+## 🚀 quick paths — three ways in
+
+| your situation | what to run | time |
+|---------------|-------------|------|
+| **First-time setup** — never had murmur on this Mac | `./setup.sh` (default bridge with Telegram push) → see `docs/QUICKSTART.md` | ~20 min |
+| **Spin up additional bridge** (article-bridge for joint authorship, or comms-bridge for new peer) | `./spawn-murmur-bridge.sh` (interactive walkthrough) | ~5 min |
+| **Production case study** — what worked / what didn't in the overnight article-bridge experiment | `docs/ARTICLE_BRIDGE_CASE_STUDY.md` | read-only |
+
+`spawn-murmur-bridge.sh` is the **second-pass installer** — assumes you already have one murmur bridge running (default SHAPER/JARVIS/your-name), and spawns an *additional* identity with its own MURMUR_HOME, LaunchAgent, writer script, state dir. Modeled after AIM brand-intake interview pattern: ask questions → collect inputs → generate artifacts.
+
+---
+
 ```
        team member's Mac                                       team mesh
 ┌────────────────────────────────────┐
