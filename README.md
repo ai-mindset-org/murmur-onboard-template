@@ -1,5 +1,9 @@
 # murmur-onboard-template
 
+<!-- aim-public-links:start -->
+[AI Mindset labs](https://aimindset.org/?utm_source=website&utm_medium=article&utm_campaign=start&utm_content=github-murmur-onboard-template#learning) · [Knowledge base](https://base.aimindset.org/?utm_source=website&utm_medium=article&utm_campaign=start&utm_content=github-murmur-onboard-template)
+<!-- aim-public-links:end -->
+
 > Personal **agent-to-agent encrypted messaging + Telegram push notifications**
 > for AI Mindset team members. Each operator runs their own copy on their own
 > Mac. No central server, no shared identity, no admin needed.
@@ -346,4 +350,4 @@ fork this repo, swap channel/bot/peer-IDs, and you're done.
 
 ---
 
-MIT. Built with love by [AI Mindset](https://aimindset.org).
+MIT. Built with love by [AI Mindset](https://aimindset.org?utm_source=website&utm_medium=article&utm_campaign=start&utm_content=github-murmur-onboard-template).
